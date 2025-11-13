@@ -1,6 +1,28 @@
 import java.util.HashMap;
 
 public class lengthOfLongestSubstring3 {
+    //这道题的暴力解法，定义一个字典，每次遍历字符时，检查当前字典中是否存在
+    // 如果存在，那么此次，判断是之前的大还是现在的大
+    // 如果不存在，当前个数+1，存入字符
+    public static int lengthOfLongestSubstringBF(String s) {
+        int max = 0;
+        for (int i = 0; i < s.length(); i++) {
+            boolean[] book = new boolean[128];
+            int current = 0;
+            for (int j = i; j < s.length(); j++) {
+                if (book[s.charAt(j)])
+                    break;
+                else {
+                    current++;
+                    book[s.charAt(j)] = true;
+                }
+            }
+            max = Math.max(current, max);
+        }
+        return max;
+    }
+
+    // 但是上面这种方法
     public static int lengthOfLongestSubstring(String s) {
         int Max = 0;
         HashMap<Character, Integer> map = new HashMap<>();
@@ -10,7 +32,6 @@ public class lengthOfLongestSubstring3 {
                 i = Math.max(i, map.get(s.charAt(j)));
             }
             //不包含，那么存入当前的1
-
             map.put(s.charAt(j), j + 1);
             Max = Math.max(Max, j - i + 1);
         }
