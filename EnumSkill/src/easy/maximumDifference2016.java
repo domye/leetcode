@@ -1,3 +1,5 @@
+package easy;
+
 public class maximumDifference2016 {
 //    给你一个下标从 0 开始的整数数组 nums ，该数组的大小为 n ，请你计算 nums[j] - nums[i] 能求得的 最大差值 ，其中 0 <= i < j < n 且 nums[i] < nums[j] 。
 //

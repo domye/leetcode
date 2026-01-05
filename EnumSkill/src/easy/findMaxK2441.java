@@ -1,3 +1,5 @@
+package easy;
+
 import java.util.HashMap;
 
 public class findMaxK2441 {
@@ -9,7 +11,7 @@ public class findMaxK2441 {
         HashMap<Integer, Integer> map = new HashMap<>();
         int max = -1;
         for (int i : nums) {
-            if (map.containsKey(0 - i))
+            if (map.containsKey(- i))
                 max = Math.max(Math.abs(i), max);
             map.put(i, 0);
         }
