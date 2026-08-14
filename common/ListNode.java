@@ -30,6 +30,11 @@ public class ListNode {
         return a;
     }
 
+    /** null 安全版 toArray：结果可能为 null（如删空）时返回空数组，便于 T.eq(int[],...) 断言。 */
+    public static int[] toArraySafe(ListNode node) {
+        return node == null ? new int[0] : node.toArray();
+    }
+
     /** 链表转字符串，便于直观查看。 */
     public String toString() {
         List<String> parts = new ArrayList<>();
