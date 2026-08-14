@@ -2,7 +2,7 @@ import common.*;
 import java.util.HashMap;
 
 public class P0003_LengthOfLongestSubstring {
-    //这道题的暴力解法，定义一个字典，每次遍历字符时，检查当前字典中是否存在
+    // 这道题的暴力解法，定义一个字典，每次遍历字符时，检查当前字典中是否存在
     // 如果存在，那么此次，判断是之前的大还是现在的大
     // 如果不存在，当前个数+1，存入字符
     public static int lengthOfLongestSubstringBF(String s) {
@@ -24,17 +24,16 @@ public class P0003_LengthOfLongestSubstring {
     }
 
     public static int lengthOfLongestSubstring(String s) {
-        int Max = 0;
-        HashMap<Character, Integer> map = new HashMap<>();
+        int max = 0;
+        HashMap book = new HashMap<>();
         for (int i = 0, j = 0; j < s.length(); j++) {
-            //如果包含字符，则i向右移动，j为当前的位置
-            if (map.containsKey(s.charAt(j))) {
-                i = Math.max(i, map.get(s.charAt(j)));
-            }
-            map.put(s.charAt(j), j + 1);
-            Max = Math.max(Max, j - i + 1);
+            if (book.containsKey(s.charAt(j)))
+                i = Math.max(i, (int) book.get(s.charAt(j)));
+            max = Math.max(max, j - i + 1);
+
+            book.put(s.charAt(j), j + 1);
         }
-        return Max;
+        return max;
     }
 
     public static void main(String[] args) {
