@@ -29,7 +29,7 @@ public class P0005_LongestPalindromicSubstring {
 
     public static void main(String[] args) {
         P0005_LongestPalindromicSubstring s = new P0005_LongestPalindromicSubstring();
-        T.eq("bab", s.longestPalindrome("babad"), "示例1 babad → bab");
+        T.eq("aba", s.longestPalindrome("babad"), "示例1 babad → bab/aba 皆可");
         T.eq("bb", s.longestPalindrome("cbbd"), "示例2 cbbd → bb");
         T.eq("a", s.longestPalindrome("a"), "示例3 单字符");
         T.eq("", s.longestPalindrome(""), "示例4 空串");
