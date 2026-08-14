@@ -1,3 +1,5 @@
+import common.*;
+
 public class P1456_MaxVowels {
     public boolean isVowel(char c) {
         return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';

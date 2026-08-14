@@ -1,4 +1,6 @@
+import common.*;
 import java.util.HashSet;
+import common.*;
 import java.util.Set;
 
 public class P0128_LongestConsecutiveSequence {

@@ -1,3 +1,5 @@
+import common.*;
+
 public class P0283_MoveZeroes {
     //这题需要将数组中的所有零放到最后
     // 类似于滑动窗口的算法

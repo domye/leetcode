@@ -1,3 +1,4 @@
+import common.*;
 import java.util.HashMap;
 
 public class P0001_TwoSum {

@@ -1,3 +1,5 @@
+import common.*;
+
 public class P2909_MinimumSumOfMountainTriplets {
     //    给你一个下标从 0 开始的整数数组 nums 。
     //    如果下标三元组 (i, j, k) 满足下述全部条件，则认为它是一个 山形三元组 ：

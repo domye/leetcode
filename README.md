@@ -5,15 +5,19 @@
 ## 结构
 
 ```
-src/
-  T.java                  # 轻量断言工具（T.eq / T.eqSet / T.summary）
+src/                      # 题目源码（每题一个文件，按题号）
   P0001_TwoSum.java
-  P0003_LengthOfLongestSubstring.java
+  P0002_AddTwoNumbers.java
   ...
-out/                      # 编译产物（.class），由 javac -d 生成，勿手改
+common/                   # 基础框架（所有题共用）
+  T.java                  # 轻量断言工具（T.eq / T.eqSet / T.summary）
+  ListNode.java           # 链表节点（of() 构造 / toArray() 转数组）
+out/                      # 编译产物（.class），由 build.ps1 生成，勿手改
 ```
 
 ## 快速上手（新增一题）
+
+1. 在 `src/` 新建 `P9999_Example.java`：
 
 ```java
 import java.util.*;
@@ -32,27 +36,13 @@ public class P9999_Example {
 }
 ```
 
-## 运行单题
+2. 运行（`.class` 自动进 `out/`，不污染源码目录）：
 
 ```powershell
-cd src
-javac -d ../out *.java
-java -cp ../out P9999_Example
+.\build.ps1 -Class P9999_Example
 ```
 
-或直接在 IntelliJ 里右键运行对应类的 main。
-
-## 批量跑全部题（验证整库）
-
-```powershell
-cd src
-javac -d ../out *.java
-Get-ChildItem -Filter 'P*.java' | ForEach-Object {
-    $class = $_.BaseName
-    Write-Host "==== $class ===="
-    java -cp ../out $class  # 任一失败会以退出码 1 结束
-}
-```
+链表题直接复用 `ListNode`：`ListNode.of(2,4,3)` 构造、`.toArray()` 转数组后用 `T.eq(int[],...)` 断言，无需自行定义。
 
 ## T 支持的断言
 

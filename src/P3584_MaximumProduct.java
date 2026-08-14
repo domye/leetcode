@@ -1,3 +1,5 @@
+import common.*;
+
 public class P3584_MaximumProduct {
     //    给你一个整数数组 nums 和一个整数 m。
     //    返回任意大小为 m 的 子序列 中首尾元素乘积的最大值。

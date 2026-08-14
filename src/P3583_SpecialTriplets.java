@@ -1,3 +1,5 @@
+import common.*;
+
 public class P3583_SpecialTriplets {
     //    给你一个整数数组 nums。
     //    特殊三元组 定义为满足以下条件的下标三元组 (i, j, k)：

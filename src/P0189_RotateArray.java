@@ -1,3 +1,5 @@
+import common.*;
+
 public class P0189_RotateArray {
     public int rotate(int[] nums, int k) {
         if (nums == null || nums.length == 0 || k == 0) {

@@ -1,3 +1,4 @@
+import common.*;
 import java.util.Arrays;
 
 public class P0238_ProductExceptSelf {

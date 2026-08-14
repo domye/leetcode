@@ -1,3 +1,4 @@
+import common.*;
 import java.util.HashMap;
 
 public class P0003_LengthOfLongestSubstring {

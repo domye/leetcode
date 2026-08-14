@@ -1,4 +1,6 @@
+import common.*;
 import java.util.HashMap;
+import common.*;
 import java.util.Map;
 
 public class P0560_SubarraySumEqualsK {
