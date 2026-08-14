@@ -40,6 +40,10 @@ public final class T {
                 "期望 " + Arrays.deepToString(expected) + "，实际 " + Arrays.deepToString(actual));
     }
 
+    public static void eq(boolean expected, boolean actual, String name) {
+        check(expected == actual, name, "期望 " + expected + "，实际 " + actual);
+    }
+
     public static void eq(String expected, String actual, String name) {
         check(expected.equals(actual), name, "期望 " + expected + "，实际 " + actual);
     }
